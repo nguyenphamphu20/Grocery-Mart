@@ -18,6 +18,21 @@ $grid-breakpoints: (
     }
 }
 
+@mixin flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin hidden() {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@mixin show() {
+    opacity: 1;
+    visibility: visible;
+}
+
 @mixin transition() {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
