@@ -1336,8 +1336,8 @@ html.dark {
   position: absolute;
   top: 0px;
   left: 0;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
   width: min(1240px, 100%);
   margin-top: 50px;
   padding-top: 54px;
@@ -1382,10 +1382,15 @@ html.dark {
   width: 36px;
   height: 36px;
 }
+@media (max-width: 991.98px) {
+  .menu-mega__images {
+    display: none;
+  }
+}
 .menu-mega__img-pos1 {
   width: 30px;
   height: 30px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .menu-mega__img-pos2 {
   position: absolute;
@@ -1393,7 +1398,7 @@ html.dark {
   right: 0;
   width: 24px;
   height: 24px;
-  object-fit: cover;
+  object-fit: contain;
   filter: var(--icon-menu-color);
 }
 .menu-mega__content {
@@ -1409,11 +1414,15 @@ html.dark {
 .menu-mega__list {
   margin-top: 19px;
 }
-.menu-mega__item:hover .menu-mega__sub {
+.menu-mega__item--active .menu-mega__sub {
   opacity: 1;
   visibility: visible;
 }
-.menu-mega__item:hover:hover > a {
+.menu-mega__item--active > a {
+  color: #0071dc;
+  font-weight: 500;
+}
+.menu-mega__item:hover > a {
   color: #0071dc;
   font-weight: 500;
 }

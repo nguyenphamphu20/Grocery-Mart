@@ -12,8 +12,7 @@
     position: absolute;
     top: 0px;
     left: 0;
-    visibility: hidden;
-    opacity: 0;
+    @include abstracts.hidden;
 
     width: min(1240px, 100%);
     margin-top: 50px;
@@ -64,12 +63,16 @@
         display: flex;
         width: 36px;
         height: 36px;
+
+        @include abstracts.breakpoint(lg) {
+            display: none;
+        }
     }
 
     &__img-pos1 {
         width: 30px;
         height: 30px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     &__img-pos2 {
@@ -78,7 +81,7 @@
         right: 0;
         width: 24px;
         height: 24px;
-        object-fit: cover;
+        object-fit: contain;
         filter: var(--icon-menu-color);
     }
 
@@ -98,12 +101,19 @@
         margin-top: 19px;
     }
 
-    &__item:hover {
+    &__item--active {
         .menu-mega__sub {
             @include abstracts.show;
         }
 
-        &:hover > a {
+        > a {
+            color: #0071dc;
+            font-weight: 500;
+        }
+    }
+
+    &__item:hover {
+        > a {
             color: #0071dc;
             font-weight: 500;
         }
