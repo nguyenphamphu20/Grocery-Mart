@@ -4,6 +4,8 @@
     .menu-mega {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        height: var(--max-height-inner);
+        overflow-y: auto;
     }
 }
 

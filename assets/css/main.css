@@ -1329,6 +1329,8 @@ html.dark {
 .nav-bar__item:not(:first-child) .menu-mega {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  height: var(--max-height-inner);
+  overflow-y: auto;
 }
 
 .dropdown {
